@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Player;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,7 +24,17 @@ class ReportsController extends Controller
 
     public function get30AndUp3Pointers(Request $request)
     {
+        $players = Player::with(['team'])
+            ->age()
+            ->isOrOlderThan(30)
+            ->threePointStats()
+            ->orderBy('three_point_accuracy', 'DESC')
+            ->having('three_point_accuracy', '>', .35)
+            ->get();
+        // dd($players->first()->totals);
+
         return view('reports.gte-30-3-pointers', [
+            'players' => $players,
             'reportKey' => '30-3-pointers',
         ]);
     }

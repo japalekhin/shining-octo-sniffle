@@ -31,6 +31,8 @@
                         NBA Stats
                     </div>
                 </a>
+                <a href="/reports" class="inline-block text-lg pl-6 py-4">View Reports</a>
+                <a href="/export" class="inline-block text-lg pl-6 py-4">Export Data</a>
                 <div class="hidden md:flex flex-row items-center ml-auto">
                     <a class="cursor-pointer bg-green-600 text-white px-6 py-2 text-lg font-bold rounded">This is a
                         CTA</a>

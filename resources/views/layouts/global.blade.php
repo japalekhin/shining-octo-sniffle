@@ -12,8 +12,8 @@
     <meta property="og:url" content="">
     <meta property="og:image" content="">
 
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" href="/icon.png">
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
